@@ -9,6 +9,8 @@ on:
 jobs:
   say_hello:
     runs-on: ubuntu-latest   # GitHub-hosted runner
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Forces Node 24 for JS actions. Attempt to suppress warning that Node.js 20 is deprecated.
 
     steps:
       - name: Checkout repository
@@ -16,5 +18,5 @@ jobs:
 
       - name: Say hello
         run: |
-          echo "Hello from GitHub Actions!"
+          echo "Hello from GitHub Actions!" >> HelloOutput.txt
 
