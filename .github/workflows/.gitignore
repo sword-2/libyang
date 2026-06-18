@@ -1,1 +1,7 @@
 hello.yml
+
+#Removed real files to speed up learning the beginner workflow files. ci.yml duration was 17m 48s
+ci.yml
+cifuzz.yml
+devel-push.yml
+
