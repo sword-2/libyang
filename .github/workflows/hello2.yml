@@ -3,9 +3,9 @@ name: My First GitHub Action
 # 1. What triggers the workflow
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 # 2. What the workflow actually does
