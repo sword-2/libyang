@@ -1,0 +1,19 @@
+#Comments on cifuzz.yml:
+
+Minor question - does the on statement in line 2 need brackets? on: [pull_request]
+
+
+The yaml spec version 1.2 was spot checked and observed to have a "flow sequence" which is written as a comma separated list within square brackets. It was like a JSON array. Maybe a sequence or array with one value is fine.
+
+Github documentation (reference 1) had examples for a single event and multiple events. The example skipped brackets for single sequence:
+	Using a single event
+		on: push
+	Using multiple events
+		on: [push, fork]
+
+
+Reference(s):
+-1.
+	Workflow syntax for GitHub Actions
+	go-to subsection for 'on'
+	https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#on
