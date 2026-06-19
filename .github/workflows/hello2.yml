@@ -1,0 +1,26 @@
+name: My First GitHub Action
+
+# 1. What triggers the workflow
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+# 2. What the workflow actually does
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    # 3. The sequence of tasks to run
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Run a simple greeting
+        run: echo "Hello, world! GitHub Actions is working."
+
+      - name: Print the runner operating system
+        run: echo "This job is running on a ${{ runner.os }} server!"
+
